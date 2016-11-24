@@ -59,10 +59,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <version>9.4.1208</version>
+</dependency>
 
 
 		<!-- Jackson JSON Mapper dependencies -->
