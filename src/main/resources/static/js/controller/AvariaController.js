@@ -1,6 +1,6 @@
 var avariaApp = angular.module("AvariaControllers", []);
 
-var urlBase = "http://localhost:8181";
+var urlBase = "https://ppi2v2v3.herokuapp.com";
 
 avariaApp.controller("AvariaController", function($scope, $http) {
 
