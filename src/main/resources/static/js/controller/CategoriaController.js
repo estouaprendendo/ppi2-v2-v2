@@ -1,6 +1,6 @@
 var categoriaApp = angular.module("CategoriaControllers", []);
 
-var urlBase = "http://localhost:8181";
+var urlBase = "https://ppi2v2v3.herokuapp.com";
 
 	categoriaApp.controller("CategoriaController", function($scope, $http) {
 
