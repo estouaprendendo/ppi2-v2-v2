@@ -1,6 +1,6 @@
 var funcionarioApp = angular.module("FuncionarioControllers", []);
 
-var urlBase = "http://localhost:8181";
+var urlBase = "https://ppi2v2v3.herokuapp.com";
 
 funcionarioApp.controller("FuncionarioController", function($scope, $http) {
 
