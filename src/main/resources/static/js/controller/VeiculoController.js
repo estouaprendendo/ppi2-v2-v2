@@ -1,6 +1,6 @@
 var veiculoApp = angular.module("VeiculoControllers", []);
 
-var urlBase = "http://localhost:8181";
+var urlBase = "https://ppi2v2v3.herokuapp.com";
 
 veiculoApp.controller("VeiculoController", function($scope, $http) {
 
