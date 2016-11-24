@@ -1,0 +1,56 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+button {
+	width: 80px;
+}
+
+input {
+	width: 100%;
+}
+
+.tam1 {
+	width: 32px;
+	height: 32px;
+}
+</style>
+
+<div>
+	<div class="well text-center">
+		<h1>Avarias</h1>
+	</div>
+
+	<div>
+		<label for="identifier">Identificador:</label>
+			<input type="text" ng-model="avaria.identifier" readonly="readonly" class="form-control" id="identifier" placeholder="identifier">
+		<label for="descricao">Descrição:</label>
+			<input type="text" ng-model="avaria.descricao" class="form-control" id="descricao" placeholder="descricao">
+	</div>
+	<br />
+	<div>
+		<button class="btn btn-primary" ng-click="novo();">Novo</button>
+		<button class="btn btn-primary" ng-click="salvar();">Salvar</button>
+	</div>
+	<br />
+	<div>
+		<label for=filtro">Buscar:</label>
+			<input type="text" ng-model="filtro" class="form-control" id="filtro">
+	</div>
+	<br />
+	<div class="table-responsive">
+		<table class="table table-striped table-hover table-bordered table-condensed">
+			<tr>
+			<th style="cursor: pointer" ng-click="orderByMe('identifier')">Identifier</th>
+			<th>Descrição</th>
+			<th>Editar</th>
+			<th>Excluir</th>
+			</tr>
+			<tr ng-repeat="avaria in avarias | orderBy:myOrderBy | filter:filtro">
+				<td>{{avaria.identifier}}</td>
+				<td>{{avaria.descricao}}</td>
+				<td><button ng-click="editar(avaria);">Editar</button></td>
+				<td><button ng-click="excluir(avaria);">Excluir</button></td>
+			</tr>
+		</table>
+	</div>
+</div>

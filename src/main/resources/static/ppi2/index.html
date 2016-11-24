@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Sistema PPI2 2016</title>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/controllers.js"></script>
+<script src="../js/controller/AvariaController.js"></script>
+<script src="../js/controller/CategoriaController.js"></script>
+<script src="../js/controller/ClienteController.js"></script>
+<script src="../js/controller/FuncionarioController.js"></script>
+<script src="../js/controller/LocacaoController.js"></script>
+<script src="../js/controller/MultaController.js"></script>
+<script src="../js/controller/VeiculoController.js"></script>
+<style>
+.navbar {
+	border-radius: 0;
+}
+</style>
+</head>
+
+<body ng-app="myApp">
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" ui-sref="inicio">Sistema PPI2 2016</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a ui-sref="inicio">Inicio</a></li>
+			<li><a ui-sref="sobre">Sobre</a></li>
+			<li><a ui-sref="avarias">Avarias</a></li>
+			<li><a ui-sref="categorias">Categorias</a></li>
+			<li><a ui-sref="clientes">Clientes</a></li>
+			<li><a ui-sref="funcionarios">Funcionários</a></li>
+			<li><a ui-sref="locacoes">Locações</a></li>
+			<li><a ui-sref="multas">Multas</a></li>
+			<li><a ui-sref="veiculos">Veículos</a></li>
+		</ul>
+	</nav>
+
+	<div class="container">
+		<div ui-view></div>
+	</div>
+</body>
+</html>

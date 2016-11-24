@@ -1,0 +1,49 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+button {
+	width: 80px;
+}
+
+input {
+	width: 100%;
+}
+
+.tam1 {
+	width: 32px;
+	height: 32px;
+}
+</style>
+
+<div>
+	<div class="well text-center">
+		<h1>Locações</h1>
+	</div>
+		<div>
+			<label for=filtro">Buscar:</label>
+			<input type="text" ng-model="filtro" class="form-control" id="filtro">
+		</div>
+		<br />
+		<div class="table-responsive">
+			<table
+				class="table table-striped table-hover table-bordered table-condensed">
+				<tr>
+					<th style="cursor: pointer" ng-click="orderByMe('identifier')">Identifier</th>
+					<th style="cursor: pointer" ng-click="orderByMe('data')">Data</th>
+					<th style="cursor: pointer" ng-click="orderByMe('cliente.nome')">Clientes</th>
+					<th style="cursor: pointer" ng-click="orderByMe('funcionarioCad.nome')">Funcionarios Cad</th>
+					<th style="cursor: pointer" ng-click="orderByMe('funcionarioRec.nome')">Funcionarios Rec</th>
+					<th style="cursor: pointer" ng-click="orderByMe('veiculo.modelo')">Veiculos</th>
+				</tr>
+				<tr
+					ng-repeat="locacao in locacoes | orderBy:myOrderBy | filter:filtro">
+					<td>{{locacao.identifier}}</td>
+					<td>{{locacao.data}}</td>
+					<td>{{locacao.cliente.nome}}</td>
+					<td>{{locacao.funcionarioCad.nome}}</td>
+					<td>{{locacao.funcionarioRec.nome}}</td>
+					<td>{{locacao.veiculo.modelo}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
