@@ -1,6 +1,6 @@
 var multaApp = angular.module("MultaControllers", []);
 
-var urlBase = "http://localhost:8181";
+var urlBase = "https://ppi2v2v3.herokuapp.com";
 
 multaApp.controller("MultaController", function($scope, $http) {
 
