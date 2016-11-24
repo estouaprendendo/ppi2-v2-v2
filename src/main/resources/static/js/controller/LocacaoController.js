@@ -1,6 +1,6 @@
 var locacaoApp = angular.module("LocacaoControllers", []);
 
-var urlBase = "http://localhost:8181";
+var urlBase = "https://ppi2v2v3.herokuapp.com";
 
 locacaoApp.controller("LocacaoController", function($scope, $http) {
 
