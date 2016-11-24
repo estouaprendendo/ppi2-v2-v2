@@ -1,6 +1,6 @@
 var clienteApp = angular.module("ClienteControllers", []);
 
-var urlBase = "http://localhost:8181";
+var urlBase = "https://ppi2v2v3.herokuapp.com";
 
 clienteApp.controller("ClienteController", function($scope, $http) {
 
